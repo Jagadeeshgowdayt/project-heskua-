@@ -45,7 +45,7 @@ async def telegraph_upload(bot, update):
         disable_web_page_preview=True,
         reply_markup=InlineKeyboardMarkup( [[
             InlineKeyboardButton(text="Open Link", url=image_url),
-            InlineKeyboardButton(text="Share Link", url=f"https://telegram.me/share/url?url={image_url}")
+            InlineKeyboardButton(text="Share Link", url=f"https://t.me/share/url?url={image_url}")
             ],[
             InlineKeyboardButton(text="✗ Close ✗", callback_data="close")
             ]])

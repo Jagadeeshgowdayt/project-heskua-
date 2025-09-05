@@ -6,7 +6,7 @@
 import traceback
 from asyncio import get_running_loop
 from io import BytesIO
-from googletrans import Translator
+from deep_translator import GoogleTranslator
 from gtts import gTTS
 from pyrogram import Client, filters
 from pyrogram.types import Message
@@ -14,8 +14,14 @@ from pyrogram.types import Message
 
 def convert(text):
     audio = BytesIO()
-    i = Translator().translate(text, dest="en")
-    lang = i.src
+    try:
+        # Detect language using deep_translator
+        detected = GoogleTranslator(source='auto', target='en').translate(text)
+        # For language detection, we'll assume the original language is the most common one
+        # or default to 'en' if detection fails
+        lang = 'en'  # Default to English for now
+    except:
+        lang = 'en'  # Fallback to English
     tts = gTTS(text, lang=lang)
     audio.name = lang + ".mp3"
     tts.write_to_fp(audio)

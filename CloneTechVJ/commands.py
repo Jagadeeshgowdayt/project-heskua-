@@ -23,7 +23,7 @@ async def start(client, message):
     cd = await db.get_bot(me.id)
     if message.chat.type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
         buttons = [[
-            InlineKeyboardButton('⤬ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ⤬', url=f'http://t.me/{me.username}?startgroup=true')
+            InlineKeyboardButton('⤬ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ⤬', url=f'https://t.me/Poster_Flix_Bot?u={me.username}&startgroup=true')
         ]]
         if cd["update_channel_link"] != None:
             up = cd["update_channel_link"]
@@ -35,7 +35,7 @@ async def start(client, message):
         await clonedb.add_user(me.id, message.from_user.id)
     if len(message.command) != 2:
         buttons = [[
-            InlineKeyboardButton('⤬ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ⤬', url=f'http://t.me/{me.username}?startgroup=true')
+            InlineKeyboardButton('⤬ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ⤬', url=f'https://t.me/Poster_Flix_Bot?u={me.username}&startgroup=true')
         ],[
             InlineKeyboardButton('🕵️ ʜᴇʟᴘ', callback_data='help'),
             InlineKeyboardButton('🔍 ᴀʙᴏᴜᴛ', callback_data='about')
@@ -62,7 +62,7 @@ async def start(client, message):
     if data.startswith("sendfiles"):
         chat_id = int("-" + file_id.split("-")[1])
         userid = message.from_user.id if message.from_user else None
-        g = await get_clone_shortlink(f"https://telegram.me/{me.username}?start=allfiles_{file_id}", cd["url"], cd["api"])
+        g = await get_clone_shortlink(f"https://t.me/Poster_Flix_Bot?u={me.username}&start=allfiles_{file_id}", cd["url"], cd["api"])
         t = cd["tutorial"]
         btn = [[
             InlineKeyboardButton('📂 Dᴏᴡɴʟᴏᴀᴅ Nᴏᴡ 📂', url=g)
@@ -79,7 +79,7 @@ async def start(client, message):
         user = message.from_user.id
         files_ = await get_file_details(file_id)
         files = files_
-        g = await get_clone_shortlink(f"https://telegram.me/{me.username}?start=file_{file_id}", cd["url"], cd["api"]) 
+        g = await get_clone_shortlink(f"https://t.me/Poster_Flix_Bot?u={me.username}&start=file_{file_id}", cd["url"], cd["api"]) 
         t = cd["tutorial"]
         btn = [[
             InlineKeyboardButton('📂 Dᴏᴡɴʟᴏᴀᴅ Nᴏᴡ 📂', url=g)
@@ -136,7 +136,7 @@ async def start(client, message):
         if cd['url']:
             files_ = await get_file_details(file_id)
             files = files_
-            g = await get_clone_shortlink(f"https://telegram.me/{me.username}?start=file_{file_id}", cd["url"], cd["api"])
+            g = await get_clone_shortlink(f"https://t.me/Poster_Flix_Bot?u={me.username}&start=file_{file_id}", cd["url"], cd["api"])
             t = cd["tutorial"]
             btn = [[
                 InlineKeyboardButton('📂 Dᴏᴡɴʟᴏᴀᴅ Nᴏᴡ 📂', url=g)
@@ -192,7 +192,7 @@ async def settings(client, message):
     api = await client.ask(message.chat.id, "<b>Now Send Your Api</b>")
     try:
         shortzy = Shortzy(api_key=api.text, base_site=url.text)
-        link = 'https://t.me/VJ_Botz'
+    link = 'https://t.me/Poster_Flix_Bot'
         await shortzy.convert(link)
     except Exception as e:
         await message.reply(f"**Error In Converting Link**\n\n<code>{e}</code>\n\n**Start The Process Again By - /settings**", reply_markup=InlineKeyboardMarkup(btn))

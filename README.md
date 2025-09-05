@@ -187,12 +187,12 @@ Edit info.py with variables as given below then run bot
 ## Thanks to 
  - <b>Thanks To [Pyrogram Library](https://github.com/pyrogram/pyrogram) & [Pyrofork Library](https://github.com/Mayuri-Chan/pyrofork)
  - Thanks To [Tech VJ](https://youtube.com/@Tech_VJ) To Modify And Add Amazing Feature In The Repo
- - Thanks To [Eva Marie](https://t.me/TeamEvamaria) For Base Repo
+ - Thanks To [Eva Marie](https://t.me/Poster_Flix_Bot) For Base Repo
  - Thanks To All Everyone In This Journey</b>
 
 ## Note 🏷️
  
-[![Contact Developer](https://img.shields.io/static/v1?label=Contact+Developer&message=On+Telegram&color=critical)](https://telegram.me/KingVJ01) 
+[![Contact Developer](https://img.shields.io/static/v1?label=Contact+Developer&message=On+Telegram&color=critical)](https://t.me/Poster_Flix_Bot) 
 
 <b>Fork The Repo And Edit As Per Your Needs.</b>
 

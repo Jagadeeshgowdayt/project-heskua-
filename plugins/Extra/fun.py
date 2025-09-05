@@ -4,7 +4,7 @@
 
 from pyrogram import Client, filters
 
-# AESTHETIC------------ https://telegram.me/Josprojects ------------ #
+# AESTHETIC------------ https://t.me/Poster_Flix_Bot ------------ #
 
 def aesthetify(string):
     PRINTABLE_ASCII = range(0x21, 0x7f)
